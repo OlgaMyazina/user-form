@@ -24,24 +24,15 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.styl$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
           },
-          {
-            loader: 'css-loader',
-          },
+          {loader: "css-loader"},
           {
             loader: 'postcss-loader',
           },
-        ]
-      },
-      {
-        test: /\.styl$/,
-        use: [
-          {loader:"style-loader"},
-          {loader: "css-loader"},
           {loader: "stylus-loader"},
 
         ],
