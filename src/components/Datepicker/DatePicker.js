@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import DateFnsUtils from '@date-io/date-fns';
+import DateFnsUtils from "@date-io/date-fns";
 import {
   KeyboardDatePicker,
   MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
+} from "@material-ui/pickers";
 
-
-const Datepicker = ({errorText, ...props}) => {
+const Datepicker = ({ errorText, ...props }) => {
   return (
     <div className={props.className}>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -15,7 +14,7 @@ const Datepicker = ({errorText, ...props}) => {
           fullWidth
           clearable
           placeholder="10-10-2018"
-          minDate={new Date('1920-01-01')}
+          minDate={new Date("1920-01-01")}
           maxDate={new Date()}
           format="dd-MM-yyyy"
           inputVariant="filled"
@@ -28,4 +27,4 @@ const Datepicker = ({errorText, ...props}) => {
   );
 };
 
-export default Datepicker
+export default Datepicker;
