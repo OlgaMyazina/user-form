@@ -4,13 +4,15 @@ import TextField from '@material-ui/core/TextField';
 
 const Input = ({errorText, ...props}) => {
   return (
-    <TextField variant="filled"
-               fullWidth
-               autoFocus
-               helperText={errorText}
-               error={Boolean(errorText)}
-               {...props}
-    />
+    <div className={props.className}>
+      <TextField variant="filled"
+                 fullWidth
+                 autoFocus
+                 helperText={errorText}
+                 error={Boolean(errorText)}
+                 {...props}
+      />
+    </div>
   )
 };
 

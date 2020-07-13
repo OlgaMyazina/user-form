@@ -4,17 +4,19 @@ import Input from "../Input/Input";
 
 const Phone = (props) => {
   return (
-    <InputMask
-      mask='+7 (999) 999-99-99'
-      name='phone'
-      label='Мобильный телефон'
-      onChange={props.onChange}
-      helperText={props.errorText}
-      error = {Boolean(props.error)}
-      required={props.required}
-    >
-      {inputProps => <Input {...inputProps} />}
-    </InputMask>
+    <div className={props.className}>
+      <InputMask
+        mask='+7 (999) 999-99-99'
+        name='phone'
+        label='Мобильный телефон'
+        onChange={props.onChange}
+        helperText={props.errorText}
+        error={Boolean(props.errorText)}
+        required={props.required}
+      >
+        {inputProps => <Input {...inputProps} />}
+      </InputMask>
+    </div>
   )
 
 };

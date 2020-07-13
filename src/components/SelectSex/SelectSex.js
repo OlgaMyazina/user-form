@@ -7,19 +7,21 @@ import Select from '@material-ui/core/Select';
 
 const SelectSex = (props) => {
   return (
-    <FormControl variant="filled" fullWidth={true}>
-      <InputLabel id="sex-select-label">Пол</InputLabel>
-      <Select
-        labelId="sex-select-label"
-        id="sex-select"
-        name='sex'
-        {...props}
-      >
-        <MenuItem value='m' key='m'>Мужской</MenuItem>
-        <MenuItem value='w' key='w'>Женский</MenuItem>
+    <div className={props.className}>
+      <FormControl variant="filled" fullWidth={true}>
+        <InputLabel id="sex-select-label">Пол</InputLabel>
+        <Select
+          labelId="sex-select-label"
+          id="sex-select"
+          name='sex'
+          {...props}
+        >
+          <MenuItem value='m' key='m'>Мужской</MenuItem>
+          <MenuItem value='w' key='w'>Женский</MenuItem>
 
-      </Select>
-    </FormControl>
+        </Select>
+      </FormControl>
+    </div>
   )
 };
 
